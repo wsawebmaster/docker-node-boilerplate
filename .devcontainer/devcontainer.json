@@ -10,11 +10,13 @@
       "settings": {},
       "extensions": [
         "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "GitHub.copilot"
       ]
     }
   },
   "mounts": [
     "source=/home/wsawebmaster/.gitconfig,target=/home/node/.gitconfig,type=bind,consistency=cached",
+    "source=/home/wsawebmaster/.ssh,target=/home/node/.ssh,type=bind,consistency=cached"
   ]
 }
