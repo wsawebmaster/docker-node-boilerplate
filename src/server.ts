@@ -1,7 +1,13 @@
 import fastify from "fastify";
-import { request } from "http";
+import cors from "@fastify/cors";
 
 const server = fastify({ logger: true });
+
+// exemplo de permissões para consumo 
+// origin: ["www.dio.me", "www.wsysteminformatica.com/br"]
+server.register(cors, {
+  origin: "*",
+});
 
 const teams = [
   { id: 1, name: "McLaren", base: "Woking, United Kingdom" },
@@ -16,7 +22,7 @@ const teams = [
   { id: 10, name: "Haas", base: "Kannapolis, United States" },
   { id: 11, name: "Uralkali Haas F1 Team", base: "Banbury, United Kingdom" },
   { id: 12, name: "Scuderia Toro Rosso", base: "Faenza, Italy" },
-]
+];
 
 const drivers = [
   { id: 1, name: "Max Verstappen", team: "Red Bull Racing" },
